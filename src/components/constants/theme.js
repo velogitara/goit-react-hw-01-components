@@ -8,5 +8,6 @@ export const theme = {
     green: '#1bb403',
     red: '#bc2a28',
     blue: '#004d80',
+    table: '#8589ff69',
   },
 };

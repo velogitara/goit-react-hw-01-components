@@ -15,13 +15,10 @@ export const TableHeadTitle = styled.th`
   padding: 5px;
 `;
 
-export const TableBody = styled.tbody`
-  border: 1px solid red;
-`;
+export const TableBody = styled.tbody``;
 
 export const TableRow = styled.tr`
-  border: 1px solid red;
-  background-color: ${props => props.theme.colors.grey};
+  background-color: ${props => props.theme.colors.table};
 `;
 
 export const TableData = styled.td`
