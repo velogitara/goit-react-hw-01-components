@@ -1,22 +1,32 @@
 import PropTypes from 'prop-types';
-import { TableContainer, TableBody, TableRow } from './Transaction.styled';
+import {
+  TableContainer,
+  TableHeadTitle,
+  TableBody,
+  TableRow,
+  TableData,
+} from './Transaction.styled';
 
 export const Transaction = ({ items }) => {
   return (
     <TableContainer>
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <TableHeadTitle>Type</TableHeadTitle>
+          <TableHeadTitle>Amount</TableHeadTitle>
+          <TableHeadTitle>Currency</TableHeadTitle>
         </tr>
       </thead>
       <TableBody>
         {items.map(item => (
           <TableRow key={item.id}>
-            <td>{item.type}</td>
-            <td>{item.amount}</td>
-            <td>{item.currency}</td>
+            <TableData style={{ borderRadius: '10px 0 0 10px' }}>
+              {item.type}
+            </TableData>
+            <TableData>{item.amount}</TableData>
+            <TableData style={{ borderRadius: '0 10px 10px 0' }}>
+              {item.currency}
+            </TableData>
           </TableRow>
         ))}
       </TableBody>
